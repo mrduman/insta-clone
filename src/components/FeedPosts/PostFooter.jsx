@@ -49,7 +49,6 @@ const PostFooter = () => {
           Feeling good
         </Text>
         <Text fontSize={"sm"} color={"gray"}>
-          {" "}
           View all 1,000 comments
         </Text>
       </Text>
