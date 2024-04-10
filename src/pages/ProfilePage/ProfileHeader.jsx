@@ -1,5 +1,79 @@
+import {
+  Avatar,
+  AvatarGroup,
+  Button,
+  Flex,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
+
 const ProfileHeader = () => {
-  return <div>ProfileHeader</div>;
+  return (
+    <Flex
+      gap={{ base: 4, sm: 10 }}
+      py={10}
+      direction={{ base: "column", sm: "row" }}
+    >
+      <AvatarGroup
+        size={{ base: "xl", md: "2xl" }}
+        justifySelf={"center"}
+        alignSelf={"flex-start"}
+        mx={"auto"}
+      >
+        <Avatar src="/profilepic.png" name="Ömer Duman" alt="programmer" />
+      </AvatarGroup>
+
+      <VStack alignItems={"center"} gap={2} flex={1} mx={"auto"}>
+        <Flex
+          direction={{ base: "column", sm: "row" }}
+          gap={4}
+          justifyContent={{ base: "center", sm: "flex-start" }}
+          alignItems={"center"}
+          w={"full"}
+        >
+          <Text fontSize={{ base: "sm", md: "lg" }}>programmer</Text>
+          <Flex gap={4} alignItems={"center"} justifyContent={"center"}>
+            <Button
+              bg={"white"}
+              color={"black"}
+              _hover={{ bg: "whiteAlpha.800" }}
+              size={{ base: "xs", md: "sm" }}
+            >
+              Edit Profile
+            </Button>
+          </Flex>
+        </Flex>
+        <Flex alignItems={"center"} width={"full"} gap={{ base: 2, sm: 4 }}>
+          <Text fontSize={{ base: "xs", md: "sm" }}>
+            <Text as={"span"} fontWeight={"bold"} mr={1}>
+              4
+            </Text>
+            Posts
+          </Text>
+          <Text fontSize={{ base: "xs", md: "sm" }}>
+            <Text as={"span"} fontWeight={"bold"} mr={1}>
+              149
+            </Text>
+            Followers
+          </Text>
+          <Text fontSize={{ base: "xs", md: "sm" }}>
+            <Text as={"span"} fontWeight={"bold"} mr={1}>
+              175
+            </Text>
+            Following
+          </Text>
+        </Flex>
+        <Flex w={"full"} gap={4}>
+          <Text fontSize={"sm"} fontWeight={"bold"}>
+            Web Developer
+          </Text>
+        </Flex>
+        <Text w={"full"} fontSize={"sm"}>
+          A passionate Frontend Developer
+        </Text>
+      </VStack>
+    </Flex>
+  );
 };
 
 export default ProfileHeader;
