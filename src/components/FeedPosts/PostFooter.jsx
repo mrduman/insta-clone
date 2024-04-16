@@ -14,7 +14,7 @@ import {
 } from "../../assets/constants";
 import { useState } from "react";
 
-const PostFooter = ({ username }) => {
+const PostFooter = ({ username, isProfilePage }) => {
   const [liked, setLiked] = useState(false);
   const [likes, setLikes] = useState(1000);
 
@@ -29,7 +29,7 @@ const PostFooter = ({ username }) => {
   };
 
   return (
-    <Box mb={10}>
+    <Box mb={10} marginTop={"auto"}>
       <Flex alignItems={"center"} gap={4} w={"full"} pt={0} mb={2} mt={4}>
         <Box onClick={handleLike} cursor={"pointer"} fontSize={18}>
           {!liked ? <NotificationsLogo /> : <UnlikeLogo />}
@@ -43,15 +43,18 @@ const PostFooter = ({ username }) => {
         {likes} likes
       </Text>
 
-      <Text fontSize={"sm"} fontWeight={700}>
-        {username}_{" "}
-        <Text as={"span"} fontWeight={400}>
-          Feeling good
+      {!isProfilePage && (
+        <Text fontSize={"sm"} fontWeight={700}>
+          {username}_{" "}
+          <Text as={"span"} fontWeight={400}>
+            Feeling good
+          </Text>
+          <Text fontSize={"sm"} color={"gray"}>
+            View all 1,000 comments
+          </Text>
         </Text>
-        <Text fontSize={"sm"} color={"gray"}>
-          View all 1,000 comments
-        </Text>
-      </Text>
+      )}
+
       <Flex
         alignItems={"center"}
         gap={2}
