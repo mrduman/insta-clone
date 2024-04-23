@@ -33,7 +33,7 @@ const Sidebar = () => {
     {
       icon: <Avatar src="/profilepic.png" />,
       text: "Profile",
-      link: "/programmer",
+      link: "/omerduman",
     },
   ];
 
