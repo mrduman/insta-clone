@@ -28,7 +28,7 @@ const usePreviewImg = () => {
     }
   };
 
-  return { selectedFile, handleImageChange };
+  return { selectedFile, handleImageChange, setSelectedFile };
 };
 
 export default usePreviewImg;
