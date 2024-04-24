@@ -1,6 +1,6 @@
 import Notifications from "./Notifications";
 import Search from "./Search";
-import Home from "./home";
+import Home from "./Home";
 import ProfileLink from "./ProfileLink";
 import CreatePost from "./CreatePost";
 
